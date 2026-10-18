@@ -162,6 +162,7 @@ jobs:
                   Write-Host -Object 'The version of the Winget currently in use:'
                   Write-Host -Object (winget --version)
 
+                  winget source reset --force   # <--- Add this line to fix the corrupted source metadata
                   winget source update
 
                   Write-Host -Object "`nInstalling Rust toolchain" -ForegroundColor Magenta
